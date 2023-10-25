@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxButtonGroupModule, IgxGridModule } from 'igniteui-angular';
+import { IgxPreventDocumentScrollModule } from './directive/prevent-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,6 @@ import { IgxGridModule } from 'igniteui-angular';
     FormComponent,
     TableComponent,
     HomePageComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -27,6 +27,8 @@ import { IgxGridModule } from 'igniteui-angular';
     AppRoutingModule,
     NgxMaskDirective,
     IgxGridModule,
+    IgxPreventDocumentScrollModule,
+	  IgxButtonGroupModule
   ],
   bootstrap: [
     AppComponent,
@@ -35,5 +37,4 @@ import { IgxGridModule } from 'igniteui-angular';
     provideNgxMask()
   ],
 })
-export class AppModule {
-}
+export class AppModule {}

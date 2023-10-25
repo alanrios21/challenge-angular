@@ -29,8 +29,10 @@ export class FormComponent {
 
     const dialogRef = this.dialog.open(ModalComponent, {
       data: {name: this.myForm.value.name, email: this.myForm.value.email, phone: this.myForm.value.phone},
-      height: '70%',
-      width: '60%'
+      height: '300px',
+      width: '500px',
+      
+    
     });
 
   

@@ -1,17 +1,20 @@
-<form [formGroup]="myForm" (ngSubmit)="onSave()" style="margin-top: 70px;"> 
-<div class="row">
-    <mat-form-field class="cold-md-1">
+<form [formGroup]="myForm" (ngSubmit)="onSave()" style="margin-top: 120px;"> 
+<div class="row box-form">
+    <mat-form-field class="cold-md-4" style="width: 30%;" appearance="outline">
        <mat-label>Nombre</mat-label>
        <input formControlName="name" matInput>
     </mat-form-field>
-    <mat-form-field class="cold-md-3">
+    <br>
+    <mat-form-field class="cold-md-4" style="width: 30%;" appearance="outline">
         <mat-label>Correo</mat-label>
         <input formControlName="email" matInput>
      </mat-form-field>
-     <mat-form-field class="cold-md-3">
+     <br>
+     <mat-form-field class="cold-md-4" style="width: 30%;" appearance="outline">
         <mat-label>Telefono</mat-label>
         <input formControlName="phone" matInput mask="000 000 0000"  >
      </mat-form-field>
-     <button type="submit" class="btn btn-primary">Enviar</button>
+     <br>
+     <button type="submit" style="width: 20%;" class="btn btn-primary">Enviar</button>
 </div>
 </form>
