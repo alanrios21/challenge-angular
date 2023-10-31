@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewChild} from '@angular/core';
+import { Component, HostBinding, ViewChild, signal} from '@angular/core';
 import { DATA } from '../data/data';
 import { IgxGridComponent } from 'igniteui-angular';
 
@@ -20,7 +20,7 @@ export class TableComponent {
   }
   public ngOnInit(): void {
       this.data = DATA;
-      this.sizes = [
+      this.sizes = signal<any[]>([
           {
               label: 'small',
               selected: this.size === 'small',
@@ -36,7 +36,7 @@ export class TableComponent {
               selected: this.size === 'large',
               togglable: true
           }
-      ];
+      ]);
   }
 
   @HostBinding('style.--ig-size')
